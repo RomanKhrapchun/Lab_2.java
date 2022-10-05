@@ -4,12 +4,12 @@ import java.util.List;
 public class Group {
     private String group;
     private List<Student> students;
-    private List<Subject> subjects;
+    private List<Subject> subject;
 
-    public Group(String group, List<Student> students, List<Subject> subjects) {
+    public Group(String group, List<Student> students, List<Subject> subject) {
         this.group = group;
         this.students = students;
-        this.subjects = subjects;
+        this.subject = subject;
     }
 
     public String getGroup() {
@@ -28,12 +28,12 @@ public class Group {
         this.students = students;
     }
 
-    public List<Subject> getSubjects() {
-        return subjects;
+    public List<Subject> getSubject() {
+        return subject;
     }
 
-    public void setSubjects(List<Subject> subjects) {
-        this.subjects = subjects;
+    public void setSubject(List<Subject> subjects) {
+        this.subject = subject;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class Group {
         return "Group{" +
                 "group='" + group + '\'' +
                 ", students=" + students +
-                ", subjects=" + subjects +
+                ", subjects=" + subject +
                 '}';
     }
 }

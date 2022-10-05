@@ -1,4 +1,7 @@
-package Task_2;
+package Task_4;
+
+import Task_2.Task_2;
+import Task_2.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,9 +10,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Task_2 {
-    public static University createUniversity() {
-
+public class Task_4 {
+    public static void main(String[] args) {
         final List<Group> groups = new ArrayList<>();
         final String groupName1 = "IT-21";
         final String speciality1 = "Java for beginners";
@@ -84,11 +86,13 @@ public class Task_2 {
         ).collect(Collectors.toList())
         ));
 
-        return new University("Novovolynsk University", groups);
-    }
-
-    public static void main(final String[] args) {
-        final University university = createUniversity();
+        final University university = new University("Novovolynsk University", groups);
         System.out.println(university);
+        final Journal journal = new Journal(university, "Roman Khrapchun");
+        System.out.println("All marks [ " + journal.getBySubject("Java for beginners", university) + " ];");
+
+        System.out.println("Students marks = [ " + Journal.getByAllStudents(university) + " ];");
+        System.out.println("One student marks = [ " + journal.getByStudent("Roman Khrapchun", university) + " ];");
+        System.out.println("One subject marks = [ " + Journal.getBySubject("Java for beginners", university) + " ];");
     }
 }

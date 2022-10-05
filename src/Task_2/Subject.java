@@ -4,22 +4,22 @@ import java.util.List;
 import java.util.Map;
 import java.time.LocalDate;
 public class Subject {
-    private String subject;
+    private String name;
     private Map<Student, Integer> mark;
     private List<LocalDate> date;
 
-    public Subject(String subject, Map<Student, Integer> mark, List<LocalDate> date) {
-        this.subject = subject;
+    public Subject(String name, Map<Student, Integer> mark, List<LocalDate> date) {
+        this.name = name;
         this.mark = mark;
         this.date = date;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getName() {
+        return name;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Map<Student, Integer> getMark() {
@@ -41,9 +41,9 @@ public class Subject {
     @Override
     public String toString() {
         return "Subject{" +
-                "subject='" + subject + '\'' +
-                ", mark=" + mark +
-                ", date=" + date +
+                "name = " + name + '\'' +
+                ", mark = " + mark +
+                ", date = " + date +
                 '}';
     }
 }

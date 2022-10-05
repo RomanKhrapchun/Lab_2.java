@@ -12,7 +12,7 @@ public class Student {
         this.group = group;
     }
 
-    public String getName() {
+    public String getStudentName() {
         return name;
     }
 
@@ -40,12 +40,12 @@ public class Student {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Student student)) return false;
-        return Objects.equals(getName(), student.getName()) && Objects.equals(getSpecialty(), student.getSpecialty()) && Objects.equals(getGroup(), student.getGroup());
+        return Objects.equals(getStudentName(), student.getStudentName()) && Objects.equals(getSpecialty(), student.getSpecialty()) && Objects.equals(getGroup(), student.getGroup());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getSpecialty(), getGroup());
+        return Objects.hash(getStudentName(), getSpecialty(), getGroup());
     }
 
     @Override
